@@ -14,7 +14,8 @@ excellent [micropython](https://micropython.org) firmware that
 supports the BNO085 on the Sensor Board.
 
 You will find the latest firmware binary in the latest 
-[releases](https://github.com/ComplexArts/SensorBoardPython/releases).
+[releases](https://github.com/ComplexArts/SensorBoardPython/releases). 
+The firmware binary is the file `firmware.bin`. 
 
 Installation is done with the `epstool.py` as described in 
 [here](https://micropython.org/download#esp32).
