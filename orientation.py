@@ -67,8 +67,8 @@ async def print_orientation():
         roll, pitch, yaw = [Orientation.RAD_TO_DEG * x for x in orient.to_euler()]
         
         # print orientation
-        print('quat @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( (ticks_ms - start_ms) / 1000,
-                                                                       roll, pitch, yaw ), end='\r' )
+        print('angles @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( (ticks_ms - start_ms) / 1000,
+                                                                         roll, pitch, yaw ), end='\r' )
 
         # wait for another packet to arrive
         ticks_ms, packet = await queue.get()
