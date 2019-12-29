@@ -17,8 +17,8 @@ demos for the Sensor Board.
 
 Two demos are provided:
 
-1. [accelerometer.py](https://github.com/ComplexArts/SensorBoardArduino/tree/master/accelerometer.py)  
+1. [accelerometer.py](https://github.com/ComplexArts/SensorBoardPython/tree/master/accelerometer.py)  
    Initializes the BNO085 and prints accelerometer readings over serial while blinking the user LEDs.
 
-2. [orientation.py](https://github.com/ComplexArts/SensorBoardArduino/tree/master/orientation.py)  
+2. [orientation.py](https://github.com/ComplexArts/SensorBoardPython/tree/master/orientation.py)  
    Initializes the BNO085 and prints orientation readings over serial while blinking the user LEDs.
