@@ -11,6 +11,7 @@
 
 import uasyncio as asyncio
 from machine import Pin
+from utime import ticks_diff
 from bno085 import BNO085, Sensor, Orientation
 
 # create event asyncio event loop
@@ -67,7 +68,7 @@ async def print_orientation():
         roll, pitch, yaw = [Orientation.RAD_TO_DEG * x for x in orient.to_euler()]
         
         # print orientation
-        print('angles @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( (ticks_ms - start_ms) / 1000,
+        print('angles @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( ticks_diff(ticks_ms, start_ms) / 1000,
                                                                          roll, pitch, yaw ), end='\r' )
 
         # wait for another packet to arrive

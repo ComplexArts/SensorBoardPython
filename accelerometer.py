@@ -11,6 +11,7 @@
 
 import uasyncio as asyncio
 from machine import Pin
+from utime import ticks_diff
 from bno085 import BNO085, Sensor
 
 # create event asyncio event loop
@@ -61,7 +62,7 @@ async def print_accelerometer():
     while True:
 
         # print acceleration
-        print('accel @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( (ticks_ms - start_ms) / 1000,
+        print('accel @ {:6.2f}s: {:+10.4f} {:+10.4f} {:+10.4f}'.format( ticks_diff(ticks_ms, start_ms) / 1000,
                                                                         packet['accel_x'],
                                                                         packet['accel_y'],
                                                                         packet['accel_z']), end='\r' )
