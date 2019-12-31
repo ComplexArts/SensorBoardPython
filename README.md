@@ -36,10 +36,10 @@ This can vary depending on the operating system you're using.
 Two demos are provided:
 
 1. [accelerometer.py](https://github.com/ComplexArts/SensorBoardPython/tree/master/accelerometer.py)  
-   Initializes the BNO085 and prints accelerometer readings over serial while blinking the user LEDs.
+   Initializes the BNO085 and prints accelerometer readings over serial while blinking one of the user LEDs.
 
 2. [orientation.py](https://github.com/ComplexArts/SensorBoardPython/tree/master/orientation.py)  
-   Initializes the BNO085 and prints orientation readings over serial while blinking the user LEDs.
+   Initializes the BNO085 and prints orientation readings over serial while blinking one of the user LEDs.
 
 The easiest way to install these programs on a board running the micropython 
 firmware is by using a tool such as 

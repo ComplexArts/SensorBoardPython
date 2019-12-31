@@ -20,14 +20,13 @@ loop = asyncio.get_event_loop()
 # create BNO085 object
 bno085 = BNO085(loop=loop)
 
-# create GPIO pin objects to control LEDs
+# create GPIO pin objects to control LED
 led1 = Pin(12, Pin.OUT)
-led2 = Pin(13, Pin.OUT)
 
 # define coroutines to be run in the loop
 
 # toggle LED coroutine
-async def toggle_leds(delay=1):
+async def toggle_led(delay=1):
 
     # repeat forever
     while True:
@@ -35,16 +34,14 @@ async def toggle_leds(delay=1):
         # toggle LEDs
         if led1.value():
             led1.off()
-            led2.on()
         else:
             led1.on()
-            led2.off()
 
         # sleep for delay seconds
         await asyncio.sleep(delay)
 
 # add to event loop
-loop.create_task(toggle_leds())
+loop.create_task(toggle_led())
 
 # print orientation coroutine
 async def print_orientation():
@@ -93,6 +90,7 @@ async def main():
     orient = await bno085.get_feature_request(Sensor.ROTATION_VECTOR)
     orient['report_interval'] = 50000
     orient = await bno085.set_feature_command(**orient)
+    print(orient)
 
     # sleeps for 20 seconds
     print('sleeping...')
