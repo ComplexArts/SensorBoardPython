@@ -64,9 +64,3 @@ after the REPL prompt. You might need to reset the board after using
 Detailed documentation for the module `bno085`, including a discussion 
 of the above demos, is available 
 [here](http://complexarts.net/docs/bno085/).
-                                                         
-                                                         
-                                                         
-                                                         
-                                                         
-)
