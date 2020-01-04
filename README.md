@@ -17,7 +17,7 @@ You will find the latest firmware binary in the latest
 [releases](https://github.com/ComplexArts/SensorBoardPython/releases). 
 The firmware binary is the file `firmware.bin`. 
 
-Installation is done with the `epstool.py` as described in 
+Installation is done with the `esptool.py` as described in 
 [here](https://micropython.org/download#esp32).
 
 First erase the ESP32 flash
